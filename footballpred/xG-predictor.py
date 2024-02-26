@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn import linear_model
 
 #Read the data 
-raw = pd.read_csv("data/merged_data6.csv", sep=",").dropna()
+raw = pd.read_csv("test.csv", sep=",").dropna()
 print(raw.head())
 
 
@@ -14,7 +14,7 @@ list_of_wanted_cols = ["X1v1","Acc","Aer","Agg","Agi","Ant","Bal","Bra","Cmd",
     "Cnt","Cmp","Cro","Dec","Det","Dri","Fin","Fir","Fla","Han","Hea","Jum","Kic",
     "Ldr","Lon","Mar","OtB","Pac","Pas","Pos","Ref","Sta","Str","Tck","Tea","Tec","Thr","TRO","Vis","Wor", "Cor"]
 x = raw[list_of_wanted_cols]
-y = raw["xG/90"]
+y = raw["NA.23"]
 print(x)
 print(y)
 
@@ -33,3 +33,4 @@ linear_anguissa_predicted_xG = LinearModel.predict(anguissa_values)
 print("Poisson Model xG for Anguissa: ", poisson_anguissa_predicted_xG)
 print("Linear Regression Model xG for Anguissa: ", linear_anguissa_predicted_xG)
 print("Actual Anguissa xG: 0.11")
+print("Antal datapunkter:" + str(len(raw)))

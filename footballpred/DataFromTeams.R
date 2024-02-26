@@ -1,8 +1,9 @@
 
 pl_path <- "data/premier_league/match_logs/"
 serie_a_path <- "data/serie_a/match_logs/"
+la_liga_path <- "data/la_liga/match_logs/"
 
-paths <- c(pl_path, serie_a_path)
+paths <- c(pl_path, serie_a_path, la_liga_path)
 print(paths)
 
 
@@ -44,4 +45,4 @@ for (path in paths) {
   team_stats <- get_data_from_teams(path, team_stats)
 }
 print(team_stats)
-write.csv(team_stats, "data/pl_and_serieA_teams.csv", row.names = FALSE)
+write.csv(team_stats, "data/pl_serieA_and_laliga_teams.csv", row.names = FALSE)

@@ -36,5 +36,6 @@ matched_names <- sapply(fm24_names, function(name) find_closest_match(name, fbre
 # Merge the data frames using the matched names
 merged_data <- na.omit(merge(napoli_players, napoli_fbref_data, by.x = "Name", by.y = "Unnamed..0_level_0", all.x = TRUE))
 
+print(merged_data)
 # Save merged data to a CSV file
-write.csv(merged_data, "data/merged_data6.csv", row.names = FALSE)
+#write.csv(merged_data, "data/merged_data6.csv", row.names = FALSE)

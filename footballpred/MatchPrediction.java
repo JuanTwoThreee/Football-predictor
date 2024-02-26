@@ -97,7 +97,7 @@ public class MatchPrediction {
         for (Map.Entry<String, Integer> entry : sortedScorelines) {
             System.out.println(entry.getKey() + ": " + entry.getValue() + " times");
             count++;
-            if (count >= 5) {
+            if (count >= 15) {
                 break;
             }
         }

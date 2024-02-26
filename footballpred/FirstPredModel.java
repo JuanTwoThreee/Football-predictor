@@ -18,7 +18,7 @@ public class FirstPredModel {
     //Actual result (1-0) appeared 9.345%
     
 
-    int nbrSimulations = 100000;
+    int nbrSimulations = 200000;
 
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class FirstPredModel {
         // teams.addAll(Plteams);
         // teams.addAll(SerieAteams);
 
-        HashSet<Team> teams = model.loadTeams("data/pl_and_serieA_teams.csv");
+        HashSet<Team> teams = model.loadTeams("data/pl_serieA_and_laliga_teams.csv");
         System.out.println("Teams List: ");
         teams.stream()
         .forEach(t -> System.out.println(t.getTeamName()));
