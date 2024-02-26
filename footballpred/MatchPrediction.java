@@ -21,7 +21,7 @@ public class MatchPrediction {
     Map<String, Integer> scorelines;
 
     public MatchPrediction(Team home, Team away) {
-        this.homexG = (home.xGH + away.xGCA)/2;
+        this.homexG = (home.xGH + away.xGCA)/2; 
         this.awayxG = (away.xGA + home.xGCH)/2;
         this.homexGperMin = this.homexG / 90;
         this.awayxGperMin = this.awayxG / 90;

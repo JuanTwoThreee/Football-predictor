@@ -6,17 +6,27 @@ public class Team {
     double xGCH; // Expected goals conceded at home
     double xGA; // Expected goals scored away
     double xGCA; // Expected goals conceded away
+ 
 
-    int pointsLastFMatches; // Points obtained in the last F matches
-    int totalPossiblePoints; // Total possible points in the last F matches
+  
 
-    public Team(String team, double xGH, double xGCH, double xGA, double xGCA, int pointsLastFMatches, int totalPossiblePoints) {
+    public Team(String team, double xGH, double xGCH, double xGA, double xGCA
+  
+        ) {
         this.teamName = team;
         this.xGH = xGH;
         this.xGCH = xGCH;
         this.xGA = xGA;
         this.xGCA = xGCA;
-        this.pointsLastFMatches = pointsLastFMatches;
-        this.totalPossiblePoints = totalPossiblePoints;
+       
+    }
+
+    @Override
+    public String toString(){
+        return teamName + "\nHome\nxG: " + xGH + "  xGA: " + xGCH + "\nAway\nxG: " + xGA + " xGA: " + xGCA +"\n\n";
+    }
+
+    public String getTeamName(){
+        return teamName;
     }
 }
